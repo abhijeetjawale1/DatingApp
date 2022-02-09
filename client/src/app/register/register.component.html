@@ -22,7 +22,12 @@
      [label]='"City"'></app-text-input>
      <app-text-input [formControl]='registerForm.controls["country"]'
      [label]='"Country"'></app-text-input>
-
+     <app-text-input [formControl]='registerForm.controls["introduction"]'
+     [label]='"Introduction"'></app-text-input>
+     <app-text-input [formControl]='registerForm.controls["lookingFor"]'
+     [label]='"Looking For"'></app-text-input>
+     <app-text-input [formControl]='registerForm.controls["interests"]'
+     [label]='"Interests"'></app-text-input>
     <app-text-input [formControl]='registerForm.controls["password"]'
     [label]='"Password"' [type]='"password"'></app-text-input>
     <app-text-input [formControl]='registerForm.controls["confirmPassword"]'
@@ -45,5 +50,6 @@
   </div>
 </form>
 
-
+<p>form value: {{registerForm.value |json}}</p>
+<p>form status {{registerForm.status |json}} </p>
 

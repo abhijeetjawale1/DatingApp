@@ -32,7 +32,9 @@ export class RegisterComponent implements OnInit {
       dateOfBirth: ['',Validators.required],
       city: ['',Validators.required],
       country: ['',Validators.required],
-
+      introduction: ['',Validators.required],
+      lookingFor: ['',Validators.required],
+      interests: ['',Validators.required],
       password:['',[Validators.required,
         Validators.minLength(4),Validators.maxLength(8)]],
       confirmPassword:['',[Validators.required,this.matchValues('password')]]
@@ -54,7 +56,7 @@ export class RegisterComponent implements OnInit {
  this.accounService.register(this.registerForm.value).subscribe(response=>
   {
     this.router.navigateByUrl('/members');
-    this.cancel();
+
   }, error=>{
     this.validationErrors=error;
   })
