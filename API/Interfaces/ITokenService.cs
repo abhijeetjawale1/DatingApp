@@ -8,7 +8,7 @@ namespace API.Interfaces
 {
     public interface ITokenService
     {
-        string CreateTokan(AppUser user);
+        Task<string> CreateTokan(AppUser user);
 
     }
 }
